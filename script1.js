@@ -1,4 +1,6 @@
 // https://www.youtube.com/watch?v=Yvz_axxWG4Y
+
+// Dot
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;

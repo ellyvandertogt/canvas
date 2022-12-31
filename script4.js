@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=Yvz_axxWG4Y
-// Particles - 17:50
+// Particles - 15:00
 // Size of the circles? 
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");

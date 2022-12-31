@@ -1,49 +1,50 @@
 // https://www.youtube.com/watch?v=Yvz_axxWG4Y
 // Particles - 17:50
+// Size of the circles? 
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particlesArray = [];
 
-window.addEventListener("resize", function() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight; 
-});
+// window.addEventListener("resize", function() {
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight; 
+// });
 
 
 //Drawinginteractive
 
-const mouse = {
-    x: undefined,
-    y: undefined,
-}
+// const mouse = {
+//     x: undefined,
+//     y: undefined,
+// }
 
 //click
 
-canvas.addEventListener("click", function(event) {
-    mouse.x = event.x;
-    mouse.y = event.y;
+// canvas.addEventListener("click", function(event) {
+//     mouse.x = event.x;
+//     mouse.y = event.y;
 
-});
+// });
 
-// mousemove
-canvas.addEventListener("mousemove", function(mousemove) {
-    mouse.x = event.x;
-    mouse.y = event.y;
+// // mousemove
+// canvas.addEventListener("mousemove", function(mousemove) {
+//     mouse.x = event.x;
+//     mouse.y = event.y;
     
-});
+// });
 
 
-class Particle {
+class Particle { // properties
     constructor() {
         // this.x = mouse.x;
         // this.y = mouse.y;
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 5 + 1;
-        this.speedX = Math.random() * 3 - 1; //in order to move different direction= positive and negative
-        this.speedY = Math.random() * 3 - 1; // (-) movement up and down
+        this.size = Math.random() * 5 + 1; //? change the number
+        this.speedX = Math.random() * 1.5 - 1.5; //in order to move to different directions= positive and negative
+        this.speedY = Math.random() * 1.5 - 1.5; // (-) movement up and down
     }
     update() {
         this.x += this.speedX;
